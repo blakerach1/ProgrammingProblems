@@ -56,16 +56,17 @@ namespace ProgrammingProblems
 
         public static bool IsPalindrome(string inputString)
         {
-            var inputStringLowerCase = inputString.ToLower();
+            var convertedString = inputString.ToLower().Replace(" ","").Trim();
+            Console.WriteLine(convertedString);
             var maxIterations = inputString.Length / 2;
             var lastIndex = inputString.Length - 1;
-            var isPalindrome = false;
+            var isPalindrome = true;
 
             for (int i = 0; i < maxIterations; i++)
             {
-                if (inputStringLowerCase[i] == inputStringLowerCase[lastIndex])
+                if (convertedString[i] != convertedString[lastIndex])
                 {
-                    isPalindrome = true;
+                    isPalindrome = false;
                 }
                 lastIndex--;
             }
