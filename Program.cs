@@ -32,32 +32,36 @@ internal class Program
         //var multipleTwo = Convert.ToInt32(Console.ReadLine());
         //ElementaryExercises.SumMultiples(enteredNumber, multipleOne, multipleTwo);
 
+        var word = Console.ReadLine();
+        var functionOutput = ElementaryExercises.IsPalindrome(word);
+        Console.WriteLine($"The word you've entered is a palindrome: {functionOutput}");
+        Console.ReadLine();
 
-        Console.Write("Enter a number: ");
-        var inputNumber = Convert.ToInt32(Console.ReadLine());
-        string userChoice;
+        //Console.Write("Enter a number: ");
+        //var inputNumber = Convert.ToInt32(Console.ReadLine());
+        //string userChoice;
 
-        do
-        {
-            Console.WriteLine(
-                "Would you like to compute the sum (a) or the product (b) of the numbers from 1 to your input number? \n" +
-                "Please type a or b: ");
-            userChoice = Console.ReadLine()?.ToLower();
+        //do
+        //{
+        //    Console.WriteLine(
+        //        "Would you like to compute the sum (a) or the product (b) of the numbers from 1 to your input number? \n" +
+        //        "Please type a or b: ");
+        //    userChoice = Console.ReadLine()?.ToLower();
 
-            if (userChoice == "a")
-            {
-                ElementaryExercises.SumNumbers(inputNumber);
-            }
-            else if (userChoice == "b")
-            {
-                ElementaryExercises.ProductOfNumbers(inputNumber);
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please type a or b.");
+        //    if (userChoice == "a")
+        //    {
+        //        ElementaryExercises.SumNumbers(inputNumber);
+        //    }
+        //    else if (userChoice == "b")
+        //    {
+        //        ElementaryExercises.ProductOfNumbers(inputNumber);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Invalid input. Please type a or b.");
 
-            }
-        } while (userChoice != "a" && userChoice != "b");
+        //    }
+        //} while (userChoice != "a" && userChoice != "b");
 
     }
 }

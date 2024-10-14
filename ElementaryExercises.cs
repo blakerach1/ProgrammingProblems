@@ -37,7 +37,7 @@ namespace ProgrammingProblems
                 {
                     sumNumber += i;
                 }
-                
+
             }
             Console.WriteLine($"The summed of numbers between 0 and {enteredNumber} that are multiples of {multipleOne} or {multipleTwo} is {sumNumber}");
         }
@@ -52,6 +52,25 @@ namespace ProgrammingProblems
             {
                 Console.WriteLine("Hello, World!");
             }
+        }
+
+        public static bool IsPalindrome(string inputString)
+        {
+            var inputStringLowerCase = inputString.ToLower();
+            var maxIterations = inputString.Length / 2;
+            var lastIndex = inputString.Length - 1;
+            var isPalindrome = false;
+
+            for (int i = 0; i < maxIterations; i++)
+            {
+                if (inputStringLowerCase[i] == inputStringLowerCase[lastIndex])
+                {
+                    isPalindrome = true;
+                }
+                lastIndex--;
+            }
+            return isPalindrome;
+
         }
     }
 }
